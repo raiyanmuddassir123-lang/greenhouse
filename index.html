@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green House | Modern Agriculture & Plant Care</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        green: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        earth: '#8B5A2B',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles for Glassmorphism & Utilities */
+        .glass {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(20, 83, 45, 0.7), rgba(20, 83, 45, 0.8)), url('https://images.unsplash.com/photo-1530836369250-ef71a3a5e4b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;
+        }
+        .image-zoom:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased bg-gray-50">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center">
+                <img src="Green House.png" alt="Green House Logo" class="h-16 w-auto"> 
+            </a>
+            
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="text-gray-700 hover:text-green-600 transition">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-green-600 transition">About</a>
+                <a href="#services" class="text-gray-700 hover:text-green-600 transition">Services</a>
+                <a href="#products" class="text-gray-700 hover:text-green-600 transition">Products</a>
+                <a href="#gallery" class="text-gray-700 hover:text-green-600 transition">Gallery</a>
+                <a href="#blog" class="text-gray-700 hover:text-green-600 transition">Blog</a>
+            </div>
+
+            <div class="hidden md:flex">
+                <a href="#contact" class="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition shadow-lg shadow-green-600/30">Contact Us</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full left-0 top-full">
+            <div class="flex flex-col px-4 py-6 space-y-4 text-center">
+                <a href="#home" class="text-gray-700 hover:text-green-600">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-green-600">About</a>
+                <a href="#services" class="text-gray-700 hover:text-green-600">Services</a>
+                <a href="#products" class="text-gray-700 hover:text-green-600">Products</a>
+                <a href="#gallery" class="text-gray-700 hover:text-green-600">Gallery</a>
+                <a href="#blog" class="text-gray-700 hover:text-green-600">Blog</a>
+                <a href="#contact" class="bg-green-600 text-white px-6 py-2 rounded-full inline-block mt-2">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg min-h-screen flex items-center pt-20 relative">
+        <div class="absolute bottom-0 w-full overflow-hidden leading-[0]">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[60px]">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,121.32,201.2,110.5,242.41,104.22,283.43,85.64,321.39,56.44Z" fill="#f9fafb"></path>
+            </svg>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 text-center" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-green-400 font-semibold tracking-wider uppercase text-sm mb-4 block">Nurturing Nature</span>
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">Welcome to <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-500">Green House</span></h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">Cultivating a sustainable future through organic farming, premium plant care, and expert agricultural solutions.</p>
+            <div class="flex justify-center gap-4">
+                <a href="#products" class="bg-green-500 hover:bg-green-600 text-white px-8 py-3.5 rounded-full font-medium transition shadow-lg shadow-green-500/40">Explore More</a>
+                <a href="#about" class="bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white px-8 py-3.5 rounded-full font-medium transition">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl image-zoom" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1591857118414-61f67498c204?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="About Green House" class="w-full h-full object-cover transition duration-500 rounded-3xl">
+                    <div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-green-100 p-4 rounded-full text-green-600 text-2xl">
+                                <i class="fa-solid fa-leaf"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-xl text-gray-800">10+ Years</h4>
+                                <p class="text-sm text-gray-500">Of Organic Farming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-green-600 font-semibold mb-2 block">About Us</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Growing a Greener World, One Plant at a Time.</h2>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        At Green House, we believe in the power of nature. We are a dedicated agriculture brand focused on providing top-tier plants, organic farming solutions, and expert consultancy to help you cultivate your perfect green space. 
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Whether you are a commercial farmer looking to transition to organic methods or a home gardener wanting to spruce up your living room, our eco-friendly practices and premium products are tailored to meet your needs.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> 100% Organic Products</li>
+                        <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> Expert Agro Consultancy</li>
+                        <li class="flex items-center text-gray-700"><i class="fa-solid fa-check-circle text-green-500 mr-3"></i> Premium Quality Seeds & Plants</li>
+                    </ul>
+                    <a href="#services" class="text-green-600 font-semibold hover:text-green-700 flex items-center gap-2">Discover our services <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-green-600 font-semibold mb-2 block">Our Services</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">What We Offer</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Plant Selling</h3>
+                    <p class="text-gray-600 text-sm">Wide variety of indoor, outdoor, and exotic plants delivered fresh to your door.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Organic Farming</h3>
+                    <p class="text-gray-600 text-sm">Sustainable and chemical-free farming solutions for a healthier yield and soil.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-hand-holding-droplet"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Gardening Tips</h3>
+                    <p class="text-gray-600 text-sm">Expert advice on soil health, watering schedules, and seasonal planting.</p>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-3xl shadow-sm hover:shadow-xl transition duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Agro Consultancy</h3>
+                    <p class="text-gray-600 text-sm">Professional consulting for farm management, greenhouse setups, and crop planning.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-24 bg-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-end mb-12" data-aos="fade-up">
+                <div>
+                    <span class="text-green-600 font-semibold mb-2 block">Our Shop</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Featured Products</h2>
+                </div>
+                <a href="#" class="hidden md:block text-green-600 hover:text-green-800 font-medium">View All <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative h-60 overflow-hidden image-zoom">
+                        <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Monstera Plant" class="w-full h-full object-cover transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-green-600 shadow-md">$24.00</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Indoor Plant</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-3">Monstera Deliciosa</h3>
+                        <button class="w-full py-2.5 rounded-full border border-green-600 text-green-600 font-medium group-hover:bg-green-600 group-hover:text-white transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative h-60 overflow-hidden image-zoom">
+                        <img src="https://images.unsplash.com/photo-1593005510509-d05b264f1c9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Organic Seeds" class="w-full h-full object-cover transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-green-600 shadow-md">$12.50</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Seeds</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-3">Organic Tomato Seeds</h3>
+                        <button class="w-full py-2.5 rounded-full border border-green-600 text-green-600 font-medium group-hover:bg-green-600 group-hover:text-white transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative h-60 overflow-hidden image-zoom">
+                        <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fertilizer" class="w-full h-full object-cover transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-green-600 shadow-md">$35.00</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Fertilizer</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-3">Eco-Grow Compost</h3>
+                        <button class="w-full py-2.5 rounded-full border border-green-600 text-green-600 font-medium group-hover:bg-green-600 group-hover:text-white transition">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-3xl shadow-md hover:shadow-xl transition overflow-hidden group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="relative h-60 overflow-hidden image-zoom">
+                        <img src="https://images.unsplash.com/photo-1459156212016-c812468e2115?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Succulent" class="w-full h-full object-cover transition duration-500">
+                        <div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-sm font-bold text-green-600 shadow-md">$15.00</div>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider">Decor Plant</span>
+                        <h3 class="text-lg font-bold text-gray-800 mt-1 mb-3">Mini Succulent Set</h3>
+                        <button class="w-full py-2.5 rounded-full border border-green-600 text-green-600 font-medium group-hover:bg-green-600 group-hover:text-white transition">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 md:hidden">
+                <a href="#" class="text-green-600 font-medium hover:underline">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <span class="text-green-600 font-semibold mb-2 block">Gallery</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Life at Green House</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div class="col-span-2 row-span-2 rounded-2xl overflow-hidden image-zoom" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition duration-500" alt="Farm">
+                </div>
+                <div class="rounded-2xl overflow-hidden image-zoom" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition duration-500" alt="Planting">
+                </div>
+                <div class="rounded-2xl overflow-hidden image-zoom" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1592424001807-68b3d67b3f94?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition duration-500" alt="Greenhouse">
+                </div>
+                <div class="col-span-2 md:col-span-1 rounded-2xl overflow-hidden image-zoom" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition duration-500" alt="Seedlings">
+                </div>
+                <div class="rounded-2xl overflow-hidden image-zoom" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfefcb0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition duration-500" alt="Harvest">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-green-600 font-semibold mb-2 block">Our Blog</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Latest Farming Tips</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="bg-white rounded-3xl shadow-md overflow-hidden group hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1589923158776-cb4485d99fd6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-green-600 mb-2 font-medium">Plant Care • Oct 12</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-green-600 transition cursor-pointer">5 Secrets to Keeping Your Indoor Plants Alive</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Struggling to keep your monstera or peace lily healthy? Here are the top five watering and lighting secrets.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-3xl shadow-md overflow-hidden group hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1599839619722-39751411ea63?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-green-600 mb-2 font-medium">Organic Farming • Oct 05</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-green-600 transition cursor-pointer">The Future of Organic Composting</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">Learn how modern farms are revolutionizing soil nutrition using advanced organic composting techniques.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="bg-white rounded-3xl shadow-md overflow-hidden group hover:-translate-y-2 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1584479898061-15742e14f50d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Blog Post" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="text-sm text-green-600 mb-2 font-medium">Setup Guide • Sep 28</div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3 hover:text-green-600 transition cursor-pointer">How to Build a Mini Greenhouse at Home</h3>
+                        <p class="text-gray-600 mb-4 line-clamp-2">A step-by-step guide to setting up your own temperature-controlled environment for exotic plants.</p>
+                        <a href="#" class="text-green-600 font-medium flex items-center gap-2 group-hover:gap-3 transition-all">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-green-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 -mr-20 -mt-20 w-72 h-72 rounded-full bg-green-800 opacity-50"></div>
+                <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-green-800 opacity-50"></div>
+                
+                <div class="relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Let's Grow Together</h2>
+                        <p class="text-green-100 mb-8 text-lg">Have questions about plant care, bulk orders, or consultancy? Send us a message and our agricultural experts will get back to you.</p>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4 text-green-50">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur text-xl"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <p class="font-semibold text-white">Visit Us</p>
+                                    <p class="text-green-200 text-sm">123 Eco Farm Road, Green Valley, CA 90210</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4 text-green-50">
+                                <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center backdrop-blur text-xl"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <p class="font-semibold text-white">Email Us</p>
+                                    <p class="text-green-200 text-sm">hello@greenhouse.agro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-lg" data-aos="fade-left">
+                        <form onsubmit="event.preventDefault();" class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition bg-gray-50" placeholder="John Doe" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Email Address</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition bg-gray-50" placeholder="john@example.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 text-sm font-medium mb-2">Message</label>
+                                <textarea rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition bg-gray-50 resize-none" placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3.5 rounded-xl transition shadow-lg shadow-green-600/30">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2">
+                    
+                    <a href="#" class="flex items-center mb-4 bg-white inline-block p-2 rounded-xl w-max">
+                        <img src="Green House.png" alt="Green House Logo" class="h-16 w-auto">
+                    </a>
+                    
+                    <p class="text-gray-400 max-w-sm mb-6 leading-relaxed">Providing premium agricultural products, organic farming solutions, and expert consultancy for a greener tomorrow.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-gray-300 flex items-center justify-center hover:bg-green-600 hover:text-white transition"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-gray-300 flex items-center justify-center hover:bg-green-600 hover:text-white transition"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 text-gray-300 flex items-center justify-center hover:bg-green-600 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#about" class="text-gray-400 hover:text-green-500 transition">About Us</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-green-500 transition">Services</a></li>
+                        <li><a href="#products" class="text-gray-400 hover:text-green-500 transition">Shop</a></li>
+                        <li><a href="#blog" class="text-gray-400 hover:text-green-500 transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-green-500 transition">Return Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Green House Agriculture. All rights reserved.</p>
+                <p class="text-gray-500 text-sm flex items-center gap-1">Crafted with <i class="fa-solid fa-heart text-green-600"></i> for nature.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize Animations
+        AOS.init({
+            once: true,
+            offset: 50,
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Sticky Navbar Effect (Add shadow/background on scroll)
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.style.background = 'rgba(255, 255, 255, 0.85)';
+            }
+        });
+    </script>
+</body>
+</html>
